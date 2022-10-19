@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Find your movie</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="title">
+                    <h1>Find your movie</h1>
+                    <a href="watchlist.html">My watchlist</a>
+                    <a href="index.html">Logout</a>
+                </div>
+
+                <div class="search-bar">
+                    <input type="text" id="search" placeholder="Search for a movie" />
+                    <button id="search-btn">Search</button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="container" id="results">
+                <img class="main-background" src="img/movie-icon.png" />
+                <p class="info">Start exploring</p>
+            </div>
+        </main>
+
+        <!-- Script -->
+        <script type="module" src="js/main.js"></script>
+    </body>
+</html>

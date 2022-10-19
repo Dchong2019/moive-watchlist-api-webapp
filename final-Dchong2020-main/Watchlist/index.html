@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login + Firebase Database</title>
+    <meta name="google-signin-scope" content="profile email">
+
+
+    <!-- Cool Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+    <meta name="google-signin-client_id" content="226953004573-g838gauouuggq3hc5rsnnp6ljl1vj3h3.apps.googleusercontent.com">
+    <!-- Our stylesheet -->
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <header><i class='bx bx-left-arrow-alt'></i>Login</header>
+    <section class="input-part">
+        <p class="info-txt"></p>
+        <div class="content">
+            <input type="text" id="full_name" placeholder="Full name">
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="New Password">
+            <div class="separator2"></div>
+            <button onclick="login()">Login</button>
+            <div class="separator3"></div>
+            <button onclick="register()">Register</button>
+            <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+        </div>
+
+    </section>
+
+</div>
+
+<script>
+    history.pushState(null, null, null);
+    window.addEventListener('popstate', function () {
+        history.pushState(null, null, null);
+    });
+</script>
+<footer> Darion Chong z:23520317</footer>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+<!-- Our script must be loaded after firebase references -->
+<script src="js/login.js"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
+</body>
+</html>
